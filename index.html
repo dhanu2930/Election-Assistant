@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Election Process Assistant</title>
+    <meta name="description" content="An interactive guide to understanding the election process, timelines, and steps.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <header class="app-header">
+            <h1>Election Process Assistant</h1>
+            <p>Your interactive guide to understanding how elections work, step-by-step.</p>
+        </header>
+
+        <main class="main-content">
+            <section class="timeline-container" id="timeline-container">
+                <!-- Timeline items will be injected here by JS -->
+            </section>
+            
+            <section class="details-container">
+                <div class="details-card glass-panel" id="details-card">
+                    <div class="empty-state" id="empty-state">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <line x1="12" y1="16" x2="12" y2="12"></line>
+                            <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                        </svg>
+                        <p>Select a phase from the timeline to see details.</p>
+                    </div>
+                    
+                    <div class="details-content hidden" id="details-content">
+                        <div class="phase-badge" id="detail-badge">Phase 1</div>
+                        <h2 id="detail-title">Title</h2>
+                        <p class="detail-timeline" id="detail-timeframe">Timeframe</p>
+                        
+                        <div class="detail-description" id="detail-desc">
+                            Description goes here.
+                        </div>
+                        
+                        <div class="key-steps">
+                            <h3>Key Steps</h3>
+                            <ul id="detail-steps">
+                                <!-- Steps injected by JS -->
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
